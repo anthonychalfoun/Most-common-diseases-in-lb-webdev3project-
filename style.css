@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2F3E46;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2F7F6;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    color: #0F4C5C;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #0F4C5C;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero h1 {
+    color: #8BC4B9;
+    font-size: 60px;
+    margin-top: 60px;
+}
+
+.hero p {
+    background-color: #8BC4B9;
+    color: #0F4C5C;
+    font-size: 20px;
+    height: 30px;
+}
+
+/*Animation from https://prismic.io/blog/css-text-animations#25-typing-text*/
+
+/* Cursor */
+.cursor {
+    position: relative;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.typewriter-animation {
+    animation:
+        typewriter 5s steps(50) 1s 1 normal both,
+        blinkingCursor 500ms steps(50) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkingCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/*Animation from https://prismic.io/blog/css-text-animations#25-typing-text*/
+
+/* About box */
+.box1 {
+    width: auto;
+    max-width: 900px;
+    height: auto;
+    background-color: #F2F7F6;
+    border: 5px solid #8BC4B9;
+    border-radius: 8px;
+    margin: 35px auto;
+    padding: 20px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 p {
+    font-size: 22px;
+    color: #0F4C5C;
+}
+
+/* Sections */
+.content {
+    padding: 50px 45px;
+}
+
+.section-title {
+    color: #8BC4B9;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.section-intro {
+    background-color: #8BC4B9;
+    color: #0F4C5C;
+    font-size: 20px;
+    padding: 8px 15px;
+    margin-bottom: 30px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #F2F7F6;
+    border: 5px solid #8BC4B9;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    color: #0F4C5C;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p,
+.card li {
+    color: #0F4C5C;
+    font-size: 20px;
+}
+
+.card ul {
+    padding-left: 22px;
+}
+
+/* Images */
+.box1 img {
+    width: 220px;
+    height: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.cancer-img {
+    display: block;
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border: 5px solid #8BC4B9;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+
+/* Contact form */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0F4C5C;
+    border-color: #8BC4B9;
+    border-radius: 8px;
+    border-style: solid;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #F2F7F6;
+    margin-bottom: 5px;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type='submit'] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type='submit']:hover {
+    background-color: #0056b3;
+}
+
+/*MCQ STYLE*/
+#quiz-box,
+#result-box {
+    background: var(--light);
+    width: 90vw;
+    max-width: 520px;
+    padding: 28px;
+    margin-top: 20px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+
+#progress {
+    margin: 0 0 8px;
+}
+
+#question,
+h2 {
+    margin: 0 0 20px;
+    line-height: 1.3;
+    color: #F2F7F6;
+}
+
+#feedback {
+    min-height: 24px;
+    font-weight: bold;
+}
+
+#score {
+    font-size: 1.2rem;
+}
+
+
+button {
+    background: var(--blue);
+    color: var(--light);
+    border: none;
+    padding: 12px 22px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+
+.option {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    background-color: #8BC4B9;
+    color: #F2F7F6;
+    border: 2px solid;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #F2F7F6;
+    color: #0F4C5C;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* Small screens */
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .box1 {
+        flex-direction: column;
+    }
+
+    .box1 img {
+        width: 100%;
+        max-height: 220px;
+    }
+}
